@@ -21,4 +21,7 @@ foreach ($pasta in @([Environment]::GetFolderPath('Desktop'), (Join-Path $env:AP
 }
 Write-Host 'Pronto! Atalho "Cordel" criado na Area de Trabalho e no Menu Iniciar.'
 Write-Host 'Se o Windows avisar "SmartScreen": clique em "Mais informacoes" > "Executar assim mesmo" (o .exe nao e assinado).'
+# abre o jogo e FECHA esta janela do PowerShell (ela não precisa ficar aberta enquanto o jogo roda)
 Start-Process $exe
+Start-Sleep -Seconds 2
+exit
