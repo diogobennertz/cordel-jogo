@@ -1,13 +1,22 @@
-# Cordelame
+# Cordel
 
-Roguelike de ação inspirado no folclore brasileiro — capoeira, jiu-jitsu, cangaço e mandinga contra o Boitatá, a Mula sem Cabeça, o Mapinguari e outras lendas.
+Roguelike de ação inspirado no folclore brasileiro, com visual de xilogravura de cordel.
 
-Este repositório tem **só os arquivos para baixar e jogar**. O código-fonte fica em outro repositório, privado.
+Este repositório tem **só o que é preciso pra baixar e jogar**.
 
-## Como baixar e jogar
+## Instalar (Windows)
+Abra o **PowerShell** e rode:
 
-1. Baixe o instalador na [página de versões (Releases)](https://github.com/diogobennertz/cordelame-jogo/releases/latest) — arquivo `Cordelame-Instalar.exe`.
-2. Rode o instalador. Não precisa de senha de administrador.
-3. Ao abrir o jogo pelo atalho criado, ele confere sozinho se há uma versão nova e já atualiza antes de começar.
+```powershell
+irm https://raw.githubusercontent.com/diogobennertz/cordel-jogo/main/instalar.ps1 | iex
+```
 
-É um jogo em desenvolvimento, para teste. Se encontrar algo estranho, me avise.
+Instala em `%LOCALAPPDATA%\Cordel`, cria o atalho na Área de Trabalho e abre o jogo.
+O `.exe` não é assinado: se o Windows mostrar o SmartScreen, clique em *Mais informações → Executar assim mesmo*.
+
+## Atualização automática
+Ao abrir, o jogo confere `versao.txt` aqui. Se houver versão nova, baixa o `jogo.pck` (uns 10 MB) e mostra o botão
+**REINICIAR AGORA** no topo; ou é só abrir de novo. O `.exe` em si quase nunca muda.
+
+## Multijogador
+Veja `COMO-JOGAR-ONLINE.txt` (dentro do `Cordel.zip`).
